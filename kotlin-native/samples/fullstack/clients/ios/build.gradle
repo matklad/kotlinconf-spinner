@@ -23,8 +23,7 @@ konan.targets = ["iphone"]
 
 konanArtifacts {
     program ('app') {
-        srcFiles fileTree('../shared/src/main/kotlin')
-        srcFiles fileTree('src/main/kotlin')
+        srcDirs 'src/main/kotlin', '../shared/src/main/kotlin', '../shared/src/audio/kotlin'
 
         libraries {
             allLibrariesFrom common

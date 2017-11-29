@@ -15,7 +15,7 @@ konanArtifacts {
     }
 
     program('FontGenerator') {
-        srcFiles 'src/FontGenerator/kotlin/FontGenerator.kt'
+        srcDirs 'src/FontGenerator/kotlin'
 
         libraries {
             allLibrariesFrom common, getopt
@@ -24,7 +24,7 @@ konanArtifacts {
     }
 
     program('BmpConvertor') {
-        srcFiles 'src/BmpConvertor/kotlin/BmpConvertor.kt'
+        srcDirs 'src/BmpConvertor/kotlin'
 
         libraries {
             allLibrariesFrom common

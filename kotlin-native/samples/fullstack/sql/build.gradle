@@ -4,8 +4,6 @@ konanArtifacts {
     interop('sqlite3')
 
     library('ksqlite') {
-        srcDir 'src'
-
         libraries {
             artifact 'sqlite3'
         }

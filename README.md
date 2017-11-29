@@ -44,7 +44,7 @@ The entire application is implemented using [Kotlin/Native](https://github.com/J
 
 ### Implementation details
 
-*   Most graphical code, sound playback and user input reaction is [shared](https://github.com/JetBrains/kotlinconf-spinner/tree/master/kotlin-native/samples/fullstack/clients/shared/src/main/kotlin) between Android and iOS
+*   Most graphical code, sound playback and user input reaction is [shared](https://github.com/JetBrains/kotlinconf-spinner/tree/master/kotlin-native/samples/fullstack/clients/shared/src/) between Android and iOS
 *   Server interaction on Android is [asynchronous](https://github.com/JetBrains/kotlinconf-spinner/blob/master/kotlin-native/samples/fullstack/clients/android/src/main/kotlin/StatsFetcherImpl.kt#L66) from the UI thread, using [workers](https://github.com/JetBrains/kotlin-native/tree/master/samples/workers)
 *   HTTP server works in multithreaded mode, state sharing between sessions performed via SQLite DB access
 *   Android app is split into separate [loader](https://github.com/JetBrains/kotlinconf-spinner/blob/master/kotlin-native/samples/fullstack/clients/android/src/loader/kotlin/loader.kt) and application code, so that dynamic library (libopenal.so) included with application can be used on older Androids

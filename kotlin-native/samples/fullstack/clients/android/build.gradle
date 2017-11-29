@@ -40,14 +40,13 @@ konanArtifacts {
     }
 
     program ('Loader') {
-        srcDir 'src/loader'
+        srcDirs 'src/loader'
         artifactName 'libloader'
     }
 
     program ('Kotlin3d') {
         artifactName 'libkotlin3d'
-        srcFiles fileTree('../shared/src/main/kotlin')
-        srcFiles fileTree('src/main/kotlin')
+        srcDirs 'src/main/kotlin', '../shared/src/main/kotlin', '../shared/src/audio/kotlin'
         enableOptimizations true
         libraries {
             artifact 'openal'
@@ -70,11 +69,8 @@ konanArtifacts {
 
     program ('Kotlin3dLight') {
         artifactName 'libkotlin3dlight'
-        srcFiles fileTree('src/light/kotlin')
-        srcFiles 'src/main/kotlin/renderer.kt', 'src/main/kotlin/StatsFetcherImpl.kt'
-        srcFiles '../shared/src/main/kotlin/vectors.kt', '../shared/src/main/kotlin/states.kt'
-        srcFiles '../shared/src/main/kotlin/control.kt', '../shared/src/main/kotlin/rendering.kt'
-        srcFiles '../shared/src/main/kotlin/gl.kt'
+        srcDirs 'src/light/kotlin', '../shared/src/main/kotlin'
+
         enableOptimizations true
         libraries {
             allLibrariesFrom common, json, kurl
